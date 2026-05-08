@@ -15,7 +15,8 @@ Cisco Packet Tracer | Computer Networks | BSSE-6th | Spring 2026
 A comprehensive network infrastructure project simulating the design and deployment of a scalable
 university network spanning **six geographically distributed campuses** across the country. This project
 demonstrates enterprise-grade network architecture principles including hierarchical design, VLSM-based
-IP management, VLAN segmentation, and department-level traffic isolation using **Cisco Packet Tracer**.
+IP management, VLAN segmentation, dynamic inter-campus routing through a centralized hub topology,
+and department-level traffic isolation using **Cisco Packet Tracer**.
 
 Built as part of the **Computer Networks** course (BSSE-6th Semester, Spring 2026).
 
@@ -74,6 +75,47 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 - Ensured Layer 2 isolation between department traffic within each campus
 - Applied consistent VLAN numbering scheme across all 6 campuses
 
+### Phase 4 -- Intra-Campus Communication
+
+- Established inter-VLAN routing within each campus
+- Connected all department networks to the campus core router (central hub per campus)
+- Configured ISL trunking for seamless intra-campus data flow
+- Verified end-to-end connectivity between all departments within a campus
+
+### Phase 5 -- Inter-Campus Communication (In Progress)
+
+- Successfully established routing between Campus B and Campus C through Campus A
+- Campus A serves as the transit hub for all inter-campus traffic (hub-and-spoke model)
+- WAN serial links configured and operational between Campus A <-> B and Campus A <-> C
+- Routing tables updated to enable cross-campus packet forwarding
+- Remaining campuses (D, E, F) to be connected in upcoming phases
+
+---
+
+## Network Topology Overview
+
+```
+                        +-------------+
+                        |  Campus B   |
+                        |  (Northern) |
+                        +------+------+
+                               |
+                               | WAN Link
+                               |
++-------------+         +------+------+         +-------------+
+|  Campus E   +---------+  Campus A   +---------+  Campus D   |
+|  (Western)  |   WAN   | (Central    |   WAN   |  (Eastern)  |
++-------------+         |    Hub)     |         +-------------+
+                        +------+------+
+                               |
+                               | WAN Link
+                               |
++-------------+         +------+------+
+|  Campus F   +---------+  Campus C   |
+|  (Central)  |   WAN   |  (Southern) |
++-------------+         +-------------+
+```
+
 ---
 
 ## Technology Stack
@@ -83,6 +125,8 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 | Simulation Tool  | Cisco Packet Tracer                       |
 | IP Addressing    | VLSM (Variable Length Subnet Masking)     |
 | Layer 2          | VLANs, 802.1Q / ISL Trunking             |
+| Layer 3          | Inter-VLAN Routing, Static/Dynamic Routing|
+| WAN              | Serial Links (Point-to-Point)             |
 | Services         | DHCP, DNS, Web Server, Mail Server        |
 
 ---
@@ -111,7 +155,7 @@ NetArch-MultiCampus/
    git clone https://github.com/Og-Brutal/NetArch-MultiCampus.git
    ```
 2. Open `CN_Project_Topology.pkt` in Cisco Packet Tracer
-3. Explore the network topology and test connectivity
+3. Explore the network topology and test connectivity between campuses
 
 ---
 
