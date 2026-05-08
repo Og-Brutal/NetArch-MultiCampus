@@ -96,18 +96,27 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 - Configured ISL trunking for seamless intra-campus data flow
 - Verified end-to-end connectivity between all departments within a campus
 
-### Phase 5 -- Inter-Campus Communication (In Progress)
+### Phase 5 -- Inter-Campus Communication (Completed)
 
-- Successfully established routing between Campus B and Campus C through Campus A
-- Successfully established routing between Campus B and Campus D through Campus A
-- Campus A serves as the transit hub for all inter-campus traffic (hub-and-spoke model)
-- WAN serial links configured and operational between Campus A <-> B, Campus A <-> C, and Campus A <-> D
-- Routing tables updated to enable cross-campus packet forwarding
-- Remaining campuses (E, F) to be connected in upcoming phases
+- Successfully established routing on all campuses
+- Full inter-campus communication achieved: every campus can successfully talk to each other
+- All inter-campus traffic is bridged through Campus A, which serves as the central transit hub (hub-and-spoke model)
+- WAN serial links configured and operational between Campus A and all regional campuses
+- Routing tables updated globally to enable complete cross-campus packet forwarding
 
 ---
 
 ## Network Topology Overview
+
+### Whole System Topology
+
+![Whole System Topology](Whole_System.png)
+
+### Particular Campus Topology
+
+![Particular Campus Topology](Particular_Campus.png)
+
+### Logical Hub-and-Spoke Architecture
 
 ```
                         +-------------+
