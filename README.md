@@ -99,10 +99,11 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 ### Phase 5 -- Inter-Campus Communication (In Progress)
 
 - Successfully established routing between Campus B and Campus C through Campus A
+- Successfully established routing between Campus B and Campus D through Campus A
 - Campus A serves as the transit hub for all inter-campus traffic (hub-and-spoke model)
-- WAN serial links configured and operational between Campus A <-> B and Campus A <-> C
+- WAN serial links configured and operational between Campus A <-> B, Campus A <-> C, and Campus A <-> D
 - Routing tables updated to enable cross-campus packet forwarding
-- Remaining campuses (D, E, F) to be connected in upcoming phases
+- Remaining campuses (E, F) to be connected in upcoming phases
 
 ---
 
