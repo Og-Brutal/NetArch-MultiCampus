@@ -10,6 +10,20 @@ Cisco Packet Tracer | Computer Networks | BSSE-6th | Spring 2026
 
 </div>
 
+<div align="center">
+
+### -- Network Demo --
+
+<video src="demo/network-demo.mp4" width="100%" controls autoplay muted loop>
+  Your browser does not support the video tag.
+</video>
+
+*Live demonstration of inter-campus communication across the network infrastructure*
+
+</div>
+
+---
+
 ## About The Project
 
 A comprehensive network infrastructure project simulating the design and deployment of a scalable
@@ -42,12 +56,12 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 
 ### Department Scale (Per Campus)
 
-| Department  | PCs       | Servers                  | Network Devices          |
-|-------------|-----------|--------------------------|--------------------------|
-| Admin       | 20 - 40   | DHCP, DNS, Web, Mail     | Managed Switches         |
-| Faculty     | 50 - 100  | Dedicated Server         | Managed Switches         |
-| Students    | 500 - 1000| Dedicated Server         | Managed Switches         |
-| Wi-Fi Zone  | 10 - 50 APs | --                    | Wireless LAN Controller  |
+| Department  | PCs        | Servers                  | Network Devices          |
+|-------------|------------|--------------------------|--------------------------|
+| Admin       | 20 - 40    | DHCP, DNS, Web, Mail     | Managed Switches         |
+| Faculty     | 50 - 100   | Dedicated Server         | Managed Switches         |
+| Students    | 500 - 1000 | Dedicated Server         | Managed Switches         |
+| Wi-Fi Zone  | 10 - 50 APs | --                     | Wireless LAN Controller  |
 
 ---
 
@@ -137,6 +151,8 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 NetArch-MultiCampus/
 |-- CN_Project_Topology.pkt              # Cisco Packet Tracer topology file
 |-- Spring2026-CN_Semester_Project.pdf   # Project requirements document
+|-- demo/
+|   |-- network-demo.mp4                # Network demonstration recording
 |-- README.md
 ```
 
