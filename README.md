@@ -15,7 +15,7 @@ Cisco Packet Tracer | Computer Networks | BSSE-6th | Spring 2026
 A comprehensive network infrastructure project simulating the design and deployment of a scalable
 university network spanning **six geographically distributed campuses** across the country. This project
 demonstrates enterprise-grade network architecture principles including hierarchical design, VLSM-based
-IP management, and department-level network segmentation using **Cisco Packet Tracer**.
+IP management, VLAN segmentation, and department-level traffic isolation using **Cisco Packet Tracer**.
 
 Built as part of the **Computer Networks** course (BSSE-6th Semester, Spring 2026).
 
@@ -67,6 +67,13 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 - Separate subnets assigned for Admin, Faculty, Students, and Server networks per campus
 - Point-to-point WAN links assigned dedicated /30 subnets
 
+### Phase 3 -- VLAN Configuration
+
+- Configured separate VLANs for each department (Admin, Faculty, Students, Servers)
+- Implemented VLAN trunking between switches using ISL / 802.1Q encapsulation
+- Ensured Layer 2 isolation between department traffic within each campus
+- Applied consistent VLAN numbering scheme across all 6 campuses
+
 ---
 
 ## Technology Stack
@@ -75,6 +82,7 @@ IP addressing, subnetting, routing protocols, WAN connectivity, security layers,
 |------------------|-------------------------------------------|
 | Simulation Tool  | Cisco Packet Tracer                       |
 | IP Addressing    | VLSM (Variable Length Subnet Masking)     |
+| Layer 2          | VLANs, 802.1Q / ISL Trunking             |
 | Services         | DHCP, DNS, Web Server, Mail Server        |
 
 ---
